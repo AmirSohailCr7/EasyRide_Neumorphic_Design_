@@ -20,7 +20,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      resizeToAvoidBottomInset: true,
+      resizeToAvoidBottomInset: false,
       appBar: CustomAppBar(
         text: 'Going SomeWhere?',
         callback: () {},
