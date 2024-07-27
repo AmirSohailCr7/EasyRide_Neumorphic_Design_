@@ -89,6 +89,7 @@ class ForgotPswrdPageState extends State<ForgotPswrdPage> {
                       controller: emailController,
                       hintText: 'Enter your email',
                       leadingIcon: Icons.person,
+                      obscureText: false,
                     ),
                     addVerticalSpace(40),
                     Listener(
