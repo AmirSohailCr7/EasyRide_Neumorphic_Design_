@@ -74,6 +74,7 @@ class _SignInSignUpPageState extends State<SignInSignUpPage> {
                     controller: emailController,
                     hintText: 'Enter your email',
                     leadingIcon: Icons.person,
+                    obscureText: false,
                   ),
                   addVerticalSpace(20),
                   CustomNeumorphicTextField(
