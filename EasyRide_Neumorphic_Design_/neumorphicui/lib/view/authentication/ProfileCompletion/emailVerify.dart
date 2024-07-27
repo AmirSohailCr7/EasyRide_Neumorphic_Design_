@@ -6,7 +6,6 @@ import 'package:neumorphicloginui/view/common_widgets/spaceWidget.dart';
 import 'package:neumorphicloginui/view/authentication/otp_pin/pin_dialog.dart';
 import 'package:neumorphicloginui/utils/common/constants/kColors.dart';
 
-
 class VerificationPage extends StatefulWidget {
   final BuildContext context;
   const VerificationPage({Key? key, required this.context}) : super(key: key);
@@ -39,9 +38,12 @@ class VerificationPageState extends State<VerificationPage> {
       backgroundColor: whiteColor,
       appBar: AppBar(
         backgroundColor: whiteColor,
-        leading: IconButton(onPressed: (){
-        Navigator.of(context).pop(false);
-      }, icon: Icon(Icons.arrow_back)),),
+        leading: IconButton(
+            onPressed: () {
+              Navigator.of(context).pop(false);
+            },
+            icon: Icon(Icons.arrow_back)),
+      ),
       body: Container(
         margin: EdgeInsets.symmetric(horizontal: 15, vertical: 12),
         child: SingleChildScrollView(
@@ -92,7 +94,10 @@ class VerificationPageState extends State<VerificationPage> {
                   margin: EdgeInsets.only(left: 10),
                   child: Text(
                     'Verification Email Sent!',
-                    style: Theme.of(context).textTheme.headlineLarge?.copyWith(fontWeight: FontWeight.bold),
+                    style: Theme.of(context)
+                        .textTheme
+                        .headlineLarge
+                        ?.copyWith(fontWeight: FontWeight.bold),
                     textAlign: TextAlign.start,
                   )),
               addVerticalSpace(20),
@@ -101,7 +106,10 @@ class VerificationPageState extends State<VerificationPage> {
                   child: Text(
                     'To complete your profile and start sharing rides with our community, you will need to verify your email address.',
                     textAlign: TextAlign.start,
-                    style: Theme.of(context).textTheme.displaySmall?.copyWith(fontWeight: FontWeight.w500),
+                    style: Theme.of(context)
+                        .textTheme
+                        .displaySmall
+                        ?.copyWith(fontWeight: FontWeight.w500),
                   )),
               addVerticalSpace(20),
               Container(
@@ -109,7 +117,10 @@ class VerificationPageState extends State<VerificationPage> {
                   child: Text(
                     'Please check your inbox and follow the instructions,if not received email click verify email button ',
                     textAlign: TextAlign.start,
-                    style: Theme.of(context).textTheme.displaySmall?.copyWith(fontWeight: FontWeight.w500),
+                    style: Theme.of(context)
+                        .textTheme
+                        .displaySmall
+                        ?.copyWith(fontWeight: FontWeight.w500),
                   )),
               addVerticalSpace(50),
               Listener(
@@ -125,15 +136,10 @@ class VerificationPageState extends State<VerificationPage> {
                     height: 50,
                     color: primaryColor,
                     onPressed: () {
-                      showModalBottomSheet(
-                        context: context,
-                        isScrollControlled: true,
-                        backgroundColor: whiteColor,
-                        shape: const RoundedRectangleBorder(
-                            borderRadius: BorderRadius.vertical(
-                                top: Radius.circular(20))),
-                        builder: (context) => DashboardScreen(
-                        ),
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => DashboardScreen()),
                       );
                     },
                     isPressed: isBtnPressed,
@@ -174,17 +180,26 @@ class VerificationPageState extends State<VerificationPage> {
                 addHorizontalSpace(10),
                 Text(
                   '40%',
-                  style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w500),
+                  style: Theme.of(context)
+                      .textTheme
+                      .headlineSmall
+                      ?.copyWith(fontWeight: FontWeight.w500),
                 ),
                 addHorizontalSpace(90),
                 Text(
                   '0%',
-                  style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w500),
+                  style: Theme.of(context)
+                      .textTheme
+                      .headlineSmall
+                      ?.copyWith(fontWeight: FontWeight.w500),
                 ),
                 addHorizontalSpace(90),
                 Text(
                   '0%',
-                  style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w500),
+                  style: Theme.of(context)
+                      .textTheme
+                      .headlineSmall
+                      ?.copyWith(fontWeight: FontWeight.w500),
                 ),
               ],
             ),
@@ -199,17 +214,26 @@ class VerificationPageState extends State<VerificationPage> {
                   addHorizontalSpace(10),
                   Text(
                     'Verify email',
-                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.w500),
+                    style: Theme.of(context)
+                        .textTheme
+                        .bodyLarge
+                        ?.copyWith(fontWeight: FontWeight.w500),
                   ),
                   addHorizontalSpace(55),
                   Text(
                     'Personal Info',
-                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.w500),
+                    style: Theme.of(context)
+                        .textTheme
+                        .bodyLarge
+                        ?.copyWith(fontWeight: FontWeight.w500),
                   ),
                   addHorizontalSpace(60),
                   Text(
                     'Phone No',
-                    style: Theme.of(context).textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.w500),
+                    style: Theme.of(context)
+                        .textTheme
+                        .bodyLarge
+                        ?.copyWith(fontWeight: FontWeight.w500),
                   ),
                 ],
               ),
